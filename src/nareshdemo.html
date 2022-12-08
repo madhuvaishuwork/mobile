@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        input:valid{
+            border:3px solid greenyellow;
+        }
+        input:invalid{
+            border:3px solid red;
+        }
+        textarea:read-only{
+            background-color:yellow;
+        }
+     
+        ol li{
+            color:red;
+            font-size: 30px;
+        }
+        li:nth-child(3)
+        {
+            color:blueviolet;
+        }
+        li:first-child
+        {
+            font-weight: bold;
+            font-family: chiller;
+        }
+        ol>li{
+            font-style: italic;
+        }
+        table{
+            border-radius: 10px;
+        
+        }
+        thead>tr>th{
+            color: brown;
+            font-size: 30px;
+        }
+        tbody tr td{
+            color:green;
+            font-size: 20px;
+        }
+        tbody tr:nth-child(2)
+        {
+color:red;
+        }
+        li{
+            display:inline;
+        }
+        li::after{
+            content:"||";
+
+        }
+        li:last-child::after
+        {
+            content:"";
+        }
+        a:visited{
+            color:rgb(255, 0, 204);
+
+        }
+        a:active{
+            color:rgb(128, 21, 0);
+
+        }
+        a:hover{
+            color:rgb(0, 255, 89);
+        }
+        button:disabled{
+            cursor: not-drop;
+            background-color: gray;
+        }
+    </style>
+    
+</head>
+<body>
+    <ol>
+        <li>html</li>
+        <li>css</li>
+        <li>bootstrap-classes</li>
+        <li>bootstrap-icons</li>
+        <li>javascript</li>
+        <li>jquery</li>
+ 
+    </ol>
+    <table cellpadding="10px" cellspacing="10px" style="border: 2px solid red">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>mobile</th>
+                <th>course</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>madhu</td>
+                <td>77788899900</td>
+                <td>java</td>
+            </tr>
+            <tr>
+                <td>madhu</td>
+                <td>77788899900</td>
+                <td>java</td>
+            </tr>
+            <tr>
+                <td>madhu</td>
+                <td>77788899900</td>
+                <td>java</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <nav>
+    <a href="hotel.html">link1</a>
+    <a href="index.html">link2</a>
+    <a href="java1.html">link3</a>
+
+    </nav>
+    <fieldset style="width:300px;height:200px;text-align:center">
+        <legend style="text-align:center;background-color:black;color:white">user details</legend>
+        <dl style="font-size: 20px;text-transform: uppercase;font-weight: bold">
+            <dt><label>name</label></dt>
+            <dd><input type="text" required></dd>
+            <dt><label>Description</label></dt>
+            <dd><textarea rows="4" cols="20" readonly>dgsjgjgjgsjgfjdgjfgdjgjgfjdgfg</textarea></dd>
+        </dl>
+    </fieldset>
+    <button disabled>click me</button>
+
+</body>
+</html>

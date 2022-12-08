@@ -1,0 +1,28 @@
+[
+    {
+        "name":"samsung",
+        "price":23000,
+        "ram":"4GB"
+
+    },
+    {
+        "name":"vivo",
+        "price":33000,
+        "ram":"8GB"
+
+    },
+    
+    {
+        "name":"oppo",
+        "price":13000,
+        "ram":"4GB"
+
+    },
+    {
+        "name":"moto",
+        "price":12000,
+        "ram":"8GB"
+
+    } 
+]
+    

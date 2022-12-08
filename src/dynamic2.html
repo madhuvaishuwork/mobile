@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function bodydis()
+        {
+        fetch("http://fakestoreapi.com/products")
+        .then(function(res){
+            return res.json();
+        })
+        .then(function(data){
+            for(var item of data)
+            {
+                var div=document.createElement("div");
+                div.className="card p-3 m-3";
+                div.style.width="200px";
+                div.innerHTML=`<img src=${item.image} height="200px" class="card-img-top">
+                <div class="card-header" style="height:160px">${item.title}</div>`;
+                document.querySelector("div").appendChild(div);
+            }
+            
+        })
+    }
+    </script>
+    <body onload="bodydis()">
+        <div id="catlog" class="d-flex flex-wrap mt-3"></div>
+    </body>

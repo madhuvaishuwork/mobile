@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script type="text/javascript">
+        function getdata()
+        {
+        fetch("http://fakestoreapi.com/products").then(function(res)
+            {
+         return res.json();
+            }).then(function(product){
+        
+      for(var item of product)
+      {
+        var div = document.createElement("div");
+                    div.className = "card m-2 p-2";
+                    div.style.width = "200px";
+                    div.innerHTML = `
+                      <img src=${item.image} height="160" class="card-img-top">
+                      <div class="card-header" style="height:180px">
+                         <p>${item.title}</p>
+                      </div>
+                      <div class="card-body">
+                         <dl>
+                            <dt>Price</dt>
+                            <dd>${item.price}</dd>
+                            <dt>Rating</dt>
+                            <dd>${item.rating.rate} [${item.rating.count}]</dd>
+                         </dl>
+                      </div>
+                    `;
+                    document.getElementById("catalog").appendChild(div);
+                }
+            })
+        }
+ 
+        </script>
+    
+</head>
+<body>
+    <button class="btn btn-primary" onclick="getdata()">fetch data</button>
+    <div id="catalog" class="d-flex flex-wrap mt-3">
+
+    </div>
+</body>
+</html>

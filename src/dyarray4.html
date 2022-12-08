@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+        function bodyload()
+        {
+        var product=["jeans","T-shirts","skirt","froke","saree","panjabisuit"];
+        for(var property in product)
+        
+document.getElementById("catlog").innerHTML=`<button>${typeof product[property]}</button><br>`;
+        
+    }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div id="catlog" style="height:300px"></div>
+</body>
+</html>

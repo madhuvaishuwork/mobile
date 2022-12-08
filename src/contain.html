@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script type="text/javascript">
+        function display()
+        {
+            var passdis=document.getElementById("passcontain");
+            var userdis=document.getElementById("usercontain");
+            
+            userdis.style.display="none";
+            passdis.style.display="block";
+        }
+        function details()
+        {
+            document.write("<b><font size=40>Logged Succesfully..");
+        }
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center" style="height:500px;">
+            <div class="border border-2 m-4 p-4">
+        <div id="usercontain" style="width:300px">
+           
+            <label class="form-label">User Name</label>
+           
+           <div class="mt-2">
+            <input type="text" class="form-control">
+            </div>
+           <div class="mt-4">
+             <button class="btn btn-warning w-100" onclick="display()">continue</button></div>
+           </div>
+           <div id="passcontain" style="width:300px;display:none">
+            
+             <label class="form-label">password</label>
+            
+            <div class="mt-2">
+             <input type="text" class="form-control">
+             </div>
+            <div class="mt-4"> <button class="btn btn-warning w-100" onclick="details()">login</button></div>
+        </div>
+        </div>
+    </div>
+     </div>
+</body>
+</html>

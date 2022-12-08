@@ -1,0 +1,48 @@
+<html>
+    <head>
+<script>
+    var data=[{name:"madhu",course:"javascript",fee:"8000",dur:"30days"},{name:"vaishu",course:"python",fee:"5000",dur:"45days"}]
+    function dis()
+    {
+        document.getElementById("msg").innerHTML="";
+        for(item of data)
+        {
+           var tr= document.createElement("tr");
+            var td1= document.createElement("td");
+                var td2= document.createElement("td");
+                var td3= document.createElement("td");
+                var td4= document.createElement("td");
+                    td1.innerHTML=`${item.name}`;
+                    td2.innerHTML=`${item.course}`;
+                    td3.innerHTML=`${item.fee}`;
+                    td4.innerHTML=`${item.dur}`;
+                    tr.appendChild(td1);
+                    tr.appendChild(td2);
+                    tr.appendChild(td3);
+                    tr.appendChild(td4);
+                    document.getElementById("msg").appendChild(tr);
+        }
+    }
+</script>
+    </head>
+    <body>
+        <dl>
+            <dt><h1>Object Details:</h1></dt>
+            <dd><button onclick="dis()">display</button></dd><br><br>
+     <table border="1" width="600px" cellpadding="10" cellspacing="10">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Fee</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody id="msg"></tbody>
+        <tfoot>
+            <tr><td colspan="4" align="center"><b>&copy; copyrights NareshIT</b></td></tr>
+        </tfoot>
+     </table>
+     </dl>
+    </body>
+</html>

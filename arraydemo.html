@@ -1,0 +1,23 @@
+<html>
+    <head>
+<script type="text/javascript">
+    var products=["vivo","oppo","samsung","nokia","moto","motorola","mi","redmi"];
+    var price=[38000,6700,3400,23000,18000,12000];
+      var res=  price.filter(function(val)
+        {
+            return val>18000;
+        })
+    document.write(res);
+    document.write("<br>");
+    var list=price.map(function(val){
+        return val;
+    })
+    document.write(list);
+    document.write("<br>");
+    document.write(price.toString());
+</script>
+    </head>
+    <body>
+
+    </body>
+</html>

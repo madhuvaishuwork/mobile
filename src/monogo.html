@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <script>
+const http = require("http");
+
+const NodeServer = http.createServer((req, res)=> {
+    res.writeHead(200, {'Content-Type':'text/html'});
+    res.write("<h2>Welcome to Node Js</h2>");
+    res.end();
+});
+NodeServer.listen(4400);
+console.log(`Server Started : http://127.0.0.1:4400`);
+</script>
+</head>
+<body>
+    Connecting....
+</body>
+</html>
+

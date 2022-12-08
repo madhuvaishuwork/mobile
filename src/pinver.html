@@ -1,0 +1,46 @@
+<html>
+<div class="container-fluid">
+    <script type="text/javascript">
+        var data=[{category:"All",products:[]},{category:"electronics",products:["tv","mobile","laptop","scanner"]},
+        {category:"clothing",products:["mens wear","women wear","kids wear","fashion wear"]}];
+  function catload()
+  {
+
+    for(var item of data)
+    {
+        var option=document.createElement("option");  
+        option.text=item.category;
+        option.value=item.category;
+        document.getElementById("cat").appendChild(option);
+    }
+  }
+  function productload()
+  {
+    var list=document.getElementById("cat").value;
+    
+    for(var item of data)
+    {
+        for(var pro of item.products)
+          {
+        var option=document.createElement("option");  
+        option.text=pro;
+        option.value=pro;
+        document.getElementById("pro").appendChild(option);
+          }
+    }
+  }
+
+
+    </script>
+    <body onload="catload()">
+        <div>
+            <select id="cat" onchange="productload()" style="width:200px"></select>
+        </div>
+        <div>
+            <select id="pro" style="width:200px"></select>
+        </div>
+        </body>
+        </html>
+ 
+    </body>
+</div>

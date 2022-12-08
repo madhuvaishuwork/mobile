@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript">
+  function valid()
+  {
+    var s1=document.getElementById("d1").value;
+    
+   document.getElementById("v1").innerHTML=s1.toUpperCase().fontcolor("red").bold();
+   document.getElementById("v2").innerHTML=s1.length;
+   document.getElementById("v3").innerHTML=s1.slice(0,5);
+   document.getElementById("v4").innerHTML=s1.substr(7,4);
+   document.getElementById("v5").innerHTML=s1.substring(-11,6);
+   document.getElementById("v6").innerHTML=s1.charAt(0);
+   document.getElementById("v7").innerHTML=s1.charCodeAt(0);
+   document.getElementById("v8").innerHTML=s1.indexOf('a');
+   document.getElementById("v9").innerHTML=s1.lastIndexOf('a');
+   document.getElementById("v10").innerHTML=s1.endsWith("script");
+   document.getElementById("v11").innerHTML=s1.startsWith("java");
+  
+  
+  }  
+</script>
+</head>
+<body>
+  
+  <dl>
+    <dt>String Functions..</dt>
+    <dt>slice</dt>
+  <span><input type="text" id="d1" onblur="valid()"></span>
+   <dd id="v1"></dd>
+   <dd id="v2"></dd>
+   <dd id="v3"></dd>
+   <dd id="v4"></dd>
+   <dd id="v5"></dd>
+   <dd id="v6"></dd>
+   <dd id="v7"></dd>
+   <dd id="v8"></dd>
+   <dd id="v9"></dd>
+   <dd id="v10"></dd>
+   <dd id="v11"></dd>
+</body>
+</html>

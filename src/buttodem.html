@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+        div{
+            margin:100px;
+        }
+       #but{
+            
+            font-weight: bold;
+            font-size: 20px;
+        }
+        </style>
+        <script type="text/javascript">
+            function data(...args){
+                var [e,mobile]=args;
+                document.write(`
+                mobile=${mobile.name}<br>
+                price=${mobile.price}<br>
+                ram=${mobile.ram}<br>
+                descr=${mobile.desc}<br>
+                descr=${e.shiftKey}<br>
+                descr=${e.ctrlKey}`);
+        
+                }
+                function dis(e)
+                {
+                    document.write(`keycode=${e.keyCode}<br>
+                    charcode=${e.charCode}
+                    `);
+                }
+
+            
+        </script>
+<title>Document</title>
+<link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    </head>
+    <body>
+        <div>
+            <label>Name:</label><br>
+            <input type="text" onkeypress="dis(event)"><br>
+        <button style="width:200px;height:40px" class="btn btn-info" id="but"
+         onclick="data(event,{name:'vivopro',price:15000,ram:8,desc:'AdvancedVersion'})">Cart Details</button>
+        
+        </div>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>Document</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function hidd(){
+            document.getElementById("show").style.display="none";
+
+        }
+        function display()
+        {
+            
+            document.getElementById("details").style.display="none";
+            document.getElementById("show").style.display="block";
+            document.getElementById("m1").innerHTML=document.getElementById("prod").value;
+            var c1=document.getElementById("ram1").checked;
+            var c2=document.getElementById("ram2").checked;
+            if(c1==true&&c2==false)
+            {
+                
+                
+            document.getElementById("m2").innerHTML="16GB";
+            }
+            else 
+            {
+                
+            document.getElementById("m2").innerHTML="32GB";
+            }
+            document.getElementById("m3").innerHTML=document.getElementById("bran").value;
+ 
+        }
+    </script>
+    <style>
+        div{
+            display:flex;
+            height:300px;
+          justify-content: center;
+          align-items: center;
+            border:2px solid red;
+            margin:100px;
+        }
+    </style>
+</head>
+<body onload="hidd()">
+    <div id="details" style="width: 300px">
+        <dl>
+         <dt>
+                Name:
+            </dt>
+            <dd>
+                <input type="text" id="prod" class="form-control">
+            </dd>
+            <dt>
+                Ram:
+            </dt>
+            <dd>
+                <input type="checkbox" id="ram1">16GB
+        
+                <input type="checkbox" id="ram2">32GB
+            </dd>
+            <dt>
+                Brand
+            </dt>
+            <dd>
+                <select id="bran">
+                    <option>Samsung</option>
+                    <option>Vivo</option>
+                    <option>Red-Mi</option>
+                </select>
+                <dd>
+                    <button class="btn btn-warning w-75" onclick="display()">Show Details</button>
+                </dd>
+
+</dl>
+
+
+    </div>
+    <div id="show" style="width:300px">
+        <dl>
+            <dt>Name:</dt>
+            <dd id="m1"></dd>
+            <dt>Ram:</dt>
+            <dd id="m2"></dd>
+            <dt>Brand:</dt>
+            <dd id="m3"></dd>
+         <dd><img src="tv1.jpg" height="100" width="100"></dd>
+        </dl>
+
+    </div>
+</body>

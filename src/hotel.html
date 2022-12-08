@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script type="text/javascript">
+        
+        var amount;
+        var total;
+        function verify()
+        {
+
+            var pay1=document.getElementById("pay").value;
+            var but1=document.getElementById("but");
+   
+            if(pay1>=2000)
+            {
+but1.disabled=false;
+            }else{
+                but1.disabled=true;
+            }
+        }
+    function display()
+    {
+        var amount;
+        var custname=document.getElementById("name").value;
+        var mobile=document.getElementById("phn").value;
+        var days=document.getElementById("dad").value;
+        var pay1=document.getElementById("pay").value;
+        var room1=document.getElementById("del");
+        var meal1=document.getElementById("bug");
+            document.getElementById("nam").innerHTML= "Hellooo.."+custname;
+            document.getElementById("mob").innerHTML= mobile;
+            document.getElementById("day").innerHTML= days;
+            
+            if(room1.checked)
+        {
+amount=4000*days;
+        }else{
+            amount=2000*days;
+        }
+        if(meal1.checked)
+        {
+amount+=120;
+        }else{
+            amount+=200;
+        }
+ var total=amount-pay1;
+  document.getElementById("amt").innerHTML= total;
+
+    }
+        
+    
+    </script>
+</head>
+<body>
+   <header>
+    <img src="kfcban.jpg" width="100%" height="200">
+   </header> 
+   <section style="margin-left:400px;margin-right:400px">
+    <h1 style="font-size: 40px;text-align: center;color: red;background-color: aqua">Customer Details</h1>
+    <div style="font-size:20px;text-align:center;font-weight: bold;color: blueviolet">
+        <dl>
+            <dt>
+                Name:
+            </dt>
+            <dd>
+                <input type="text" size="60" id="name">
+            </dd>
+            <dt>
+                mobile:
+            </dt>
+            <dd>
+                <input type="text" size="60" id="phn">
+            </dd>
+            <dt>
+                Days:
+            </dt>
+            <dd>
+                <input type="number" size="60" id="dad">
+            </dd>
+            <dt>
+                persons:
+            </dt>
+            <dd>
+                <input type="number" size="60">
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <h1 style="font-size: 40px;text-align: center;color: red;background-color: aqua">Select Room</h1>
+    <div style="display:flex">
+       <div>
+<img src="delux.jpg" height="200" width="200"><br>
+<input type="radio" name="room" id="del"><span style="font-size:20px;color:red;font-weight: bold">Delux-Room 4000/-</span>
+       </div>
+       <div style="height:200px;width:200px"></div>
+       <div>
+<img src="rom1.jpg" height="200" width="200"><br>
+<input type="radio" name="room" id="nor"><span style="font-size:20px;color:red;font-weight: bold">Normal-Room 2000/-</span>
+       </div> 
+    </div>
+   
+    </div>
+    <div>
+    <h1 style="font-size: 40px;text-align: center;color: red;background-color: aqua">Select Meals</h1>
+    <div style="display:flex">
+       <div>
+<img src="cok.jpg" height="200" width="200"><br>
+<input type="radio" name="meal" id="bug"><span style="font-size:20px;color:red;font-weight: bold">Burger 120/-</span>
+       </div>
+       <div style="height:200px;width:200px"></div>
+       <div>
+<img src="nug.jpg" height="200" width="200"><br>
+<input type="radio" name="meal" id="nug"><span style="font-size:20px;color:red;font-weight: bold">Nuggets 200/-</span>
+       </div> 
+    </div>
+    </div>
+    <div>
+    <h1 style="font-size: 40px;text-align: center;color: red;background-color: aqua">Select Emenities</h1>
+    <div style="display:flex">
+       <div>
+<img src="ac1.jpg" height="200" width="200"><br>
+<input type="radio" name="emi"><span style="font-size:20px;color:red;font-weight: bold">A/C 1000/-</span>
+       </div>
+       <div style="height:200px;width:200px"></div>
+       <div>
+<img src="lock.jpg" height="200" width="200"><br>
+<input type="radio" name="emi"><span style="font-size:20px;color:red;font-weight: bold">Locker 500/-</span>
+       </div> 
+    </div>
+   </div>
+   <div style="margin-top: 10px">
+    <button class="btn btn-primary btn-lg w-100" disabled id="but" onclick="display()">Register</button>
+</div>
+   
+   
+   <div>
+    <h3 style="font-size: 25px;text-align: center;color: red">Advance Payment:<input type="text" size="40" id="pay" onblur="verify()"></h3>
+   </div>
+   <div style="height:300px;width:700px;background-color: aqua">
+    <h3 style="padding-top:20px;font-size: 25px;text-align: center;color: red">User-Details</h3>
+    <div class="row" style="padding:20px;font-size:25px;font-weight:bold">
+        <div class="col-3">Name:</div>
+        <div class="col-9" id="nam"></div>
+        <div class="col-3">mobile:</div>
+        <div class="col-9" id="mob"></div>
+        <div class="col-3">No. of Days:</div>
+        <div class="col-9" id="day"></div>
+        <div class="col-3">Amount :</div>
+        <div class="col-9" id="amt"></div>
+
+
+    </div>
+</div>
+
+   
+   </section>
+</body>
+</html>

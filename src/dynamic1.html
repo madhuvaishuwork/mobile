@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+
+        var categ=["Electronics","Mens clothing","Womens Clothing","Kids Wear"];
+        function dataload()
+        {
+            document.getElementById("ldata").innerHTML="";
+            for(var item of categ)
+            {
+                
+               var option=document.createElement("option");
+                option.text=item;
+                option.value=item;
+document.querySelector("select").appendChild(option);
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <select id="ldata" style="width:200px"></select>
+    <button onclick="dataload()">loadcategories</button>
+</body>
+</html>

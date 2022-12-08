@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+var city=["all","kit","nail","ball"];
+function del()
+{
+    var val=document.getElementById("u1").value;
+    var pos=city.indexOf(val);
+    city.splice(pos,1);
+    document.getElementById("data").innerHTML="";
+    for(item of city){
+    document.getElementById("data").innerHTML+=`${item}<br>`;
+}
+}
+        </script>
+    </head>
+    <body>
+        <input type="text" id="u1">
+        <button onclick="del()">delete</button>
+        <p id="data"></p>
+    </body>
+</html>

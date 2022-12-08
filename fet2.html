@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    
+    <script type="text/javascript">
+        function proload()
+        {
+        fetch("http://fakestoreapi.com/products")
+        .then(function(res)
+        {
+            return res.json();
+        })
+        .then(function(data)
+        {
+            for(var item of data)
+            {
+               var div=document.createElement("div"); 
+               div.className="card p-2 m-2";
+               div.style.width="300px";
+               div.innerHTML=`<img src=${item.image} height="200" width="200" class="card-img-top">
+               <div class="card-header" style="height:160px">
+                ${item.title}
+                </div>
+                <div class="card-body">
+                    <dl>
+                        <dt>price<dt>
+                            <dd>${item.price}</dd>
+                            <dl></div>`;
+                                document.getElementById("catlog").appendChild(div);
+            }
+        })
+
+    }
+    </script>
+    </head>
+    <body onload="proload()">
+        <div class="d-flex flex-wrap m-4 p-4" id="catlog">
+
+        </div>
+    </body>
+</html>

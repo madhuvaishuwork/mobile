@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript">
+    var sal=[3200,4500,1200,2300,3500,1600];
+    document.writeln(sal.toString()+"<br>");
+    document.writeln(sal.join("--->")+"<br>");
+    var res=sal.filter(function(val){
+        return val>2300;
+    })
+    document.writeln(res+"<br>");
+sal.unshift(5000);
+document.write(sal.toString()+"<br>");
+sal.pop();
+document.write(sal.toString()+"<br>");
+sal.splice(2,0,9393784299);
+document.write(sal.toString()+"<br>");
+sal.splice(4,2);
+document.write(sal.toString()+"<br>");
+sal.shift();
+document.write(sal.toString()+"<br>");
+sal.slice(4,2);
+document.write(sal.toString()+"<br>");
+</script>
+</head>
+<body>
+    
+</body>
+</html>

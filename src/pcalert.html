@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+            function display(){
+
+            var name=prompt("Enter Folder Name");
+            if(name==null)
+            document.getElementById("m1").innerHTML="clicked cancel";
+            else
+            if(name==""){
+            
+            alert("enter name");
+        
+            var name=prompt("Enter Folder Name");
+            }
+            else
+            document.getElementById("m1").innerHTML="<h5>Hello..</h5>"+name;
+
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <dl>
+            <dt>Name:</dt>
+            <dd><button onclick="display()">Enter Name</button></dd>
+            <dd id="m1"></dd>
+        </dl>
+    </body>
+</html>

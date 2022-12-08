@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script type="text/javascript">
+    var cities=["hyde","bang","goac","delhi"];
+    document.write(cities.toString()+"<br>");
+    cities.map(function(cat){
+        document.write(`<li>${cat}</li>`);
+    });
+    cities.map(function(cit){
+        document.write(`<input type="checkbox">${cit}</input>`+"<br>");
+    });
+    cities.map(function(cit){
+        document.write(`<button>${cit}</button>`+"<br>");
+    });
+    var product=[1011,"samsung",43000,"8gb"];
+    var [id,name,price,ram]=product;
+document.write(id+"<br>"+name+"<br>"+price+"<br>");
+var price=[2300,3000,1200,500,2500,5000];
+for(val of price)
+{
+    document.write(val+"<br>");
+}
+res=price.filter(function(cost){
+return cost>2000;
+});
+document.write(res+"<br>");
+    </script>
+</body>
+</html>

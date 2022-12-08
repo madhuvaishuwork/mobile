@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script type="text/javascript">
+        
+        function add()
+        {
+            var cities=[];
+        var city=document.getElementById("cit").value;
+          if(cities.indexOf(city)==-1)
+          {
+            cities.push(city);
+          }
+          
+          for(val of cities)
+          {
+       var option=document.createElement("option");
+        option.text=val;
+        option.value=val;
+        document.querySelector("select").appendChild(option);
+        }
+    }
+    </script>
+    <input type="text" size="40" id="cit"><button onclick="add()">Add City</button>
+    <select id="sel"></select>
+</body>
+</html>

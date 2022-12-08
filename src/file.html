@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <script>
+            var data1=[];
+                     function insert(){
+                
+                var u1=document.getElementById("user").value;
+                if(data1.indexOf(u1)==-1)
+                {
+                data1.push(u1);
+            
+                }
+                document.querySelector("select").innerHTML="";
+         for(item of data1)
+          {
+            
+       var option=document.createElement("option");
+        option.text=item;
+        option.value=item;
+        document.querySelector("select").appendChild(option);
+          }
+        }
+        function del()
+{
+    var val=document.getElementById("u2").value;
+    var pos=data1.indexOf(val);
+    data1.splice(pos,1);
+    document.getElementById("per").innerHTML="";
+    for(item of data1){
+        var option=document.createElement("option");
+        option.text=item;
+        option.value=item;
+        document.getElementById("per").appendChild(option);
+          }   
+
+}
+        
+            
+        </script>
+        </head>
+        <body>
+            <div>
+                <dl>
+                    <dt>Name:</dt>
+                    <dd><input type="text" id="user"></dd><br>
+                    <dd><button onclick="insert()">Insert</button></dd><br>
+                    <dd><input type="text" id="u2"></dd><br>
+                
+                    <dd> <button onclick="del()">delete</button></dd><br>
+                     
+                    <select style="width:100px" id="per"></select>
+                </dl>
+            </div>
+        </body>
+</html>

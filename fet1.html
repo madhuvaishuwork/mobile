@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    
+    </head>
+    <script type="text/javascript">
+        function display()
+        {
+       fetch("https://fakestoreapi.com/products")
+       .then(function(res){
+        return res.json()
+       })
+       .then(function(data){
+        for(var item of data)
+        {
+           var tr=document.createElement("tr");
+            var td1=document.createElement("td");
+                var td2=document.createElement("td");
+                    var td3=document.createElement("td");
+                td1.innerHTML=`${item.id}`;
+                td2.innerHTML=`<img src=${item.image} height="200" width="200">`;
+                td3.innerHTML=`<p style="width:160px">${item.title}<p>`;
+                    
+                    tr.appendChild(td1);
+                    tr.appendChild(td2);
+                    tr.appendChild(td3);
+            
+
+document.getElementById("pro1").appendChild(tr);
+
+        }
+       })
+    }
+
+    </script>
+    <body onload="display()">
+        <div class="m-4 p-4">
+            <table class="table table-hover" id="pro1">
+
+            </table>
+
+        </div>
+
+    </body>
+</html>

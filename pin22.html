@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+    .dis1{
+        display:flex;
+        flex-wrap: wrap;
+        align-items:center;
+        justify-content:center;
+        height: 300px;
+        width:500px;
+        border: 2px solid black;
+        margin:100px;
+        padding: 30px;
+        margin-left: 500px;
+    }
+    </style>
+        <script type="text/javascript">
+            var card={
+                name:"madhu",
+                pin:"444333222",
+                cvv:321
+            };
+            function validate()
+            {
+              var user=document.getElementById("name").value;
+              var butt1=document.getElementById("card1");
+              if(user=="madhu")
+              {
+                butt1.style.display="block";
+              }
+
+            }
+            function vali()
+            {
+              var cv=document.getElementById("cvv").value;
+              var ccar =document.getElementById("car").value;
+              var butt1 =document.getElementById("card1");
+    
+ 
+              if(ccar=="444333222" && cv=="321")
+              {
+                butt1.disabled=false;
+    
+            }
+        }
+        function show()
+        {
+var disp=document.getElementById("veri");
+var pur=document.getElementById("per");
+per.style.display="none";
+disp.style.display="block";
+        }
+     
+        </script>
+    </head>
+    <body class="container-fluid">
+        <div class="dis1" id="per">
+            <div style="width: 400px">
+            <label>Name:</label>
+            <input type="text" class="w-100" id="name" onblur="validate()">
+            </div>
+            <div style="width:400px">
+            <label>Card:</label>
+            <input type="text" class="w-100" id="car">
+            </div>
+            <div style="width:400px">
+            <label>CVV:</label>
+            <input type="text" class=" mb-2 w-100" id="cvv" onblur="vali()">
+            </div>
+    <div><button class="btn btn-info" disabled style="display:none" id="card1" onclick="show()">card process</button></div>
+    <div id="mess"></div>
+     </div>
+     <div class="dis1" style="display:none" id="veri">
+      <h4 style="color:green;font-size: 35px">card successfully verified</h4>
+     </div>
+    </body>
+</html>

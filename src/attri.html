@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+            form{
+                font-size: 20px;
+                text-align: center;
+            }
+            input{
+                width:300px;
+                height:40px;
+            }
+            input:required{
+                box-shadow: 2px 2px 4px red;
+            }
+
+        </style>
+    </head>
+    <body></body>
+        <form>
+            <label>Name: </label><br><br>
+            <input type="text" autofocus><br>
+            <label>Mobile: </label><br><br>
+            <input type="text" pattern="\d{10}"><br>
+            <label>Course: </label><br><br>
+            <input type="text"value="UI Technology" disabled readonly><br><br>
+            <button  class="btn btn-primary w-25" type="submit"> submit</button>
+
+        </form>
+    </body>
+</html>
